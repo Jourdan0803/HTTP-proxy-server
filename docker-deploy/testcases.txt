@@ -1,0 +1,176 @@
+test for CONNECT: https://www.youtube.com/
+==========================================
+1: "CONNECT i.ytimg.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:06 2024
+1: Requesting "CONNECT i.ytimg.com:443 HTTP/1.1" from i.ytimg.com
+1: Responding "HTTP/1.1 200 OK"
+1: Tunnel closed
+2: "CONNECT www.youtube.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:08 2024
+2: Requesting "CONNECT www.youtube.com:443 HTTP/1.1" from www.youtube.com
+2: Responding "HTTP/1.1 200 OK"
+3: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:08 2024
+3: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+3: Responding "HTTP/1.1 200 OK"
+5: "CONNECT i.ytimg.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:08 2024
+5: Requesting "CONNECT i.ytimg.com:443 HTTP/1.1" from i.ytimg.com
+5: Responding "HTTP/1.1 200 OK"
+6: "CONNECT googleads.g.doubleclick.net:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:09 2024
+6: Requesting "CONNECT googleads.g.doubleclick.net:443 HTTP/1.1" from googleads.g.doubleclick.net
+6: Responding "HTTP/1.1 200 OK"
+7: "CONNECT www.google.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:09 2024
+8: "CONNECT i4.ytimg.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:09 2024
+9: "CONNECT ad.doubleclick.net:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:09 2024
+10: "CONNECT yt3.ggpht.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:09 2024
+7: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+10: Responding "HTTP/1.1 200 OK"
+8: Requesting "CONNECT i4.ytimg.com:443 HTTP/1.1" from i4.ytimg.com
+10: Responding "HTTP/1.1 200 OK"
+9: Requesting "CONNECT ad.doubleclick.net:443 HTTP/1.1" from ad.doubleclick.net
+10: Responding "HTTP/1.1 200 OK"
+10: Requesting "CONNECT yt3.ggpht.com:443 HTTP/1.1" from yt3.ggpht.com
+10: Responding "HTTP/1.1 200 OK"
+12: "CONNECT jnn-pa.googleapis.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:36:10 2024
+12: Requesting "CONNECT jnn-pa.googleapis.com:443 HTTP/1.1" from jnn-pa.googleapis.com
+12: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for GET and POST: http://httpbin.org/forms/post
+==========================================
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:38:59 2024
+0: not in cache
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: Received "HTTP/1.1 200 OK" from httpbin.org
+0: not cacheable because there is no eTag or last modified date.
+0: Responding "HTTP/1.1 200 OK"
+1: WARNING Invalid Request
+2: "POST http://httpbin.org/post HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:39:08 2024
+2: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+2: Received "HTTP/1.1 200 OK" from httpbin.org
+2: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for in cache valid: http://run.mocky.io/v3/f78613fe-9d4b-4e04-b198-b436acb2dd4d 
+==========================================
+0: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:49:13 2024
+0: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+0: Responding "HTTP/1.1 200 OK"
+1: "GET http://run.mocky.io/v3/f78613fe-9d4b-4e04-b198-b436acb2dd4d HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:49:13 2024
+1: not in cache
+1: Requesting "GET http://run.mocky.io/v3/f78613fe-9d4b-4e04-b198-b436acb2dd4d HTTP/1.1" from run.mocky.io
+1: Received "HTTP/1.1 200 OK" from run.mocky.io
+1: Responding "HTTP/1.1 200 OK"
+2: "GET http://run.mocky.io/v3/f78613fe-9d4b-4e04-b198-b436acb2dd4d HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:49:16 2024
+2: in cache, valid
+2: Responding "HTTP/1.1 200 OK"
+==========================================
+
+
+test for expiration time: http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 
+==========================================
+0: "GET http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:50:44 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: Responding "HTTP/1.1 200 OK"
+1: "GET http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:50:46 2024
+1: in cache, but expired at Thu, 22 Oct 2023 07:28:00 GMT
+1: Requesting GET http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 HTTP/1.1" from run.mocky.io
+1: Received "HTTP/1.1 200 OK" from run.mocky.io
+1: NOTE evicted http://run.mocky.io/v3/0c6a4d43-6cfa-42bd-b9c8-9a56e0c9bd98 from cache
+1: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for must re-validation: http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2
+==========================================
+0: "GET http://run.mocky.io/v3/83d1cbcc-7232-488b-897c-40ad9fb205d2 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:53:10 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/83d1cbcc-7232-488b-897c-40ad9fb205d2 HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: Responding "HTTP/1.1 200 OK"
+1: "GET http://run.mocky.io/v3/83d1cbcc-7232-488b-897c-40ad9fb205d2 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:53:11 2024
+1: cached, but requires re-validation
+1: Requesting GET http://run.mocky.io/v3/83d1cbcc-7232-488b-897c-40ad9fb205d2 HTTP/1.1" from run.mocky.io
+1: Received "HTTP/1.1 200 OK" from run.mocky.io
+1: NOTE evicted http://run.mocky.io/v3/83d1cbcc-7232-488b-897c-40ad9fb205d2 from cache
+1: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for expired and must re-validation: http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2
+==========================================
+0: "GET http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:52:07 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2 HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: Responding "HTTP/1.1 200 OK"
+1: "GET http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:52:08 2024
+1: in cache, but expired at Thu, 22 Oct 2023 07:28:00 GMT
+1: Requesting GET http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2 HTTP/1.1" from run.mocky.io
+1: Received "HTTP/1.1 200 OK" from run.mocky.io
+1: NOTE evicted http://run.mocky.io/v3/dfd7c9c8-d49d-4956-89c2-c618718cbad2 from cache
+1: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for chunk message: http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx
+==========================================
+0: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:55:05 2024
+0: not in cache
+0: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+0: Received "HTTP/1.1 200 OK" from www.httpwatch.com
+0: not cacheable because the response is no-store
+0: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for no-store: http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx
+==========================================
+0: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 19:57:09 2024
+0: not in cache
+0: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+0: Received "HTTP/1.1 200 OK" from www.httpwatch.com
+0: not cacheable because the response is no-store
+0: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for no-cache: http://run.mocky.io/v3/b3daf7af-953c-4a43-96cc-ab9872a2542f
+==========================================
+0: "GET http://run.mocky.io/v3/b3daf7af-953c-4a43-96cc-ab9872a2542f HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 20:06:07 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/b3daf7af-953c-4a43-96cc-ab9872a2542f HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: not cacheable because the response is no-cache
+0: Responding "HTTP/1.1 200 OK"
+
+
+test for no E-tag or Last-Modified: http://run.mocky.io/v3/6115fdbe-c9e9-480a-8cc7-02d32d922c90
+==========================================
+0: "GET http://run.mocky.io/v3/6115fdbe-c9e9-480a-8cc7-02d32d922c90 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 20:09:51 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/6115fdbe-c9e9-480a-8cc7-02d32d922c90 HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: not cacheable because there is no eTag or last modified date.
+0: Responding "HTTP/1.1 200 OK"
+==========================================
+
+test for private: http://run.mocky.io/v3/01c8adcc-68f2-42c9-a155-3f9b2c7718a9
+==========================================
+0: "GET http://run.mocky.io/v3/01c8adcc-68f2-42c9-a155-3f9b2c7718a9 HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 20:17:38 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/01c8adcc-68f2-42c9-a155-3f9b2c7718a9 HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: not cacheable because the response is private
+0: Responding "HTTP/1.1 200 OK"
+
+
+test for max-age = 0: http://run.mocky.io/v3/93a4223f-232b-4447-9220-7a231174da4c
+==========================================
+0: "GET http://run.mocky.io/v3/93a4223f-232b-4447-9220-7a231174da4c HTTP/1.1" from 10.198.90.194 @ Thu Feb 29 20:14:16 2024
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/93a4223f-232b-4447-9220-7a231174da4c HTTP/1.1" from run.mocky.io
+0: Received "HTTP/1.1 200 OK" from run.mocky.io
+0: not cacheable because there is no Max-Age or expiration time.
+0: Responding "HTTP/1.1 200 OK"
+
+
+test for 400 Error
+==========================================
+Split the terminal while running docker and run: `echo -e "DELETE / HTTP/1.1\r\nHost: example.com\r\nInvalid-Header: \r\n\r\n" | nc localhost 12345`
+The terminal will output `The method DELETE is not supported.`
+The `netcat` will get the return of 400 error code: `HTTP/1.1 400 Bad Request`.

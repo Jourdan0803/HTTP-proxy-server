@@ -1,0 +1,20 @@
+# version: '2'
+
+# services:
+#   main:
+#     build: ./src
+#     volumes:
+#       - ./src:/var/log/erss
+#     ports:
+#       - "12345:12345"
+
+version: '2'
+
+services:
+  main:
+    build: ./src
+    volumes:
+      - ./logs:/var/log/erss
+      - ./src:/code
+    ports:
+      - "12345:12345"
